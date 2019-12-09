@@ -62,7 +62,7 @@ const handleInput = (a, b, res) => {
 
 const handleMultiplyInput = (a, b, res) => {
     if(calc.sanitizeNumbers(a,b)) {
-        res.json({'result': calc.multiply(calc.sanitizeNumbers(a, b)).toFixed(3) });
+        res.json({'result': calc.multiply(calc.sanitizeNumbers(a, b)).toFixed(0) });
     } else {
 	const errorMsg1 = `number1 and number2 must to be numberish.
 		          but number1 was: ${a} and number2 was: ${b} `;
